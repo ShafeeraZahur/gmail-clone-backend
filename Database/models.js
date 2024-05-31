@@ -33,9 +33,28 @@ const emailSchema = mongoose.Schema({
     type: {
         type: String,
         required: true,
-    }
+    },
 })
 
 const Email = mongoose.model('emails', emailSchema, "Gmail-Clone");
 
-export default Email;
+
+
+const authSchema = mongoose.Schema({
+    email: {
+        type: "string",
+        required: true,
+    },
+    password: {
+        type: "string",
+        required: true,
+    },
+    isAccountVerified: {
+        type: "boolean",
+        required: true,
+    },
+})
+
+const Auth = mongoose.model('auth',authSchema, "Authentication");
+
+export  {Auth, Email};

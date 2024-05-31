@@ -1,4 +1,4 @@
-import Email from "../Database/models.js";
+import {Email} from "../Database/models.js";
 
 
 

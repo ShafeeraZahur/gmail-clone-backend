@@ -14,9 +14,7 @@ const cloudUri=`mongodb+srv://${dbUsername}:${dbPassword}@${dbClustername}/${dbN
 const connectToDb = async() => {
     try {
         await mongoose.connect(cloudUri);
-        console.log("Connected to MongoDB");
       } catch (err) {
-        console.log("Error connecting to MongoDB", err);
         process.exit(1);
       }
 };
